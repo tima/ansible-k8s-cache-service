@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: define cache service resource
+      k8s:
+        state: "{{ cache_service_state | default(omit) }}"
+        definition: "{{ lookup('template', 'k8s-cache-service-def.yaml.j2') | from_yaml }}"
+        kubeconfig: "{{ k8s_cluster_config | default(omit) }}" 

@@ -1,0 +1,10 @@
+---
+apiVersion: mcrouter.example.com/v1alpha3
+kind: Mcrouter
+metadata:
+  name: {{ cache_service_name | default('my-cache-service') }}
+  namespace: {{ cache_service_namespace | default('default') }}
+spec:
+  memcached_pool_size: {{ cache_service_memcached_pool_size | default(2) }}
+  # The memcached pool can be 'sharded' or 'replicated'.
+  pool_setup: {{ cache_service_pool_setup | default('replicated') }}
