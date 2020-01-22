@@ -3,6 +3,8 @@
   connection: local
   gather_facts: false
   # k8s_kubeconfig_src is required
+  vars:
+    ansible_python_interpreter: '{{ ansible_playbook_python }}'
   tasks:
     - name: read service configuration file
       include_vars:
