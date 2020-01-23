@@ -1,4 +1,4 @@
 cache_service_name: devconf-cz
 cache_service_namespace: default
-cache_service_memcached_pool_size: 1
+cache_service_memcached_pool_size: 3
 cache_service_pool_setup: replicated
