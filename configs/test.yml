@@ -1,5 +1,5 @@
 cache_service_name: tima-test
 cache_service_namespace: default
-cache_service_memcached_pool_size: 3
+cache_service_memcached_pool_size: 5
 cache_service_pool_setup: replicated
 k8s_kubeconfig_src: aws-demo-kubeconfig
